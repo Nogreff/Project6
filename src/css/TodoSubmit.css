@@ -1,0 +1,137 @@
+.todo_form{
+    width: 35rem;
+    height: 5.5rem;
+    border-radius: 1rem;
+    border: 2px solid orange;
+    box-shadow: -2px -2px 2px gold,2px 2px 2px gold;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.form_text{
+    width: 18rem;
+    height: 3rem;
+    font-size: 1rem;
+    background-color: black;
+    box-shadow: -3px -3px 3px gray inset,3px 3px 3px gray inset;
+    padding-left: 0.5rem;
+    color: #fff;
+    border-style: none;
+}
+.form_text.error:invalid{
+    box-shadow: -3px -3px 3px red inset,3px 3px 3px red inset;
+}
+
+.form_text_wrapper.error::after{
+    content: "Invalid value";
+    display: block;
+    position: relative;
+    color: #fff;
+    background-color: red;
+    width: 18.6rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    top:22%;
+    font-size: 0.8rem;
+}
+.check_repeat_wrapper{
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
+}
+.check_enable_wrapper::after{
+    content:"disable";
+    display: inline-block;
+    color: #fff;
+    font-size: 0.8rem;
+    margin-left: 0.1rem;
+}
+.check_repeat_wrapper::after{
+    content:"repeat";
+    display:inline-block;
+    color: #fff;
+    font-size: 0.8rem;
+    margin-left: 0.1rem;
+
+}
+.form_time{
+    width: 5rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    background-color: black;
+    box-shadow: -3px -3px 3px gray inset,3px 3px 3px gray inset;
+    color: #fff;
+    border-style: none;
+}
+
+.form_time.error:invalid{
+    box-shadow: -3px -3px 3px red inset,3px 3px 3px red inset;
+}
+.form_time_wrapper.error::after{
+    content: "Invalid value";
+    display: block;
+    position: relative;
+    color: #fff;
+    background-color: red;
+    width: 5.25rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    top:22%;
+    font-size: 0.8rem;
+}
+@media (max-width:40rem){
+    .todo_form{
+        flex-wrap: wrap;
+        width:28rem;
+        height: 11rem;
+        margin-bottom: 2rem;
+    }
+    .form_text{
+        width: 14rem;
+        height: 2.5rem;
+        font-size: 0.9rem;
+    }
+    .form_time{
+        height: 2.5rem;
+        width: 4.2rem;
+        font-size: 0.9rem;
+    }
+    .form_text_wrapper.error::after{
+        width: 14.6rem;
+        top:24.4%
+    }
+    .form_time_wrapper.error::after{
+        padding:  0 0.1rem;
+        width: 4.25rem;
+        top:35.8%
+    }
+}
+@media (max-width:29rem){
+    .todo_form{
+        width:16rem;
+    }
+}
+.form_time.disabled{
+    color:black;
+    box-shadow: none;
+}
+.form_text:focus,.form_time:focus{
+    outline: none;
+    box-shadow: -2px -2px 2px lightgray inset,2px 2px 3px lightgray inset;
+}
+.todo_btn{
+    height: 3rem;
+    background-color: orange;
+    border-style: none;
+    border-radius: 1rem;
+    width: 5rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    transition: background-color 300ms ease;
+}
+.todo_btn:hover{
+    background-color: #FFD2B6;
+    cursor: pointer;
+    
+}
