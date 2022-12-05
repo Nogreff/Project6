@@ -83,7 +83,7 @@
 @media (max-width:40rem){
     .todo_form{
         flex-wrap: wrap;
-        width:28rem;
+        width:24rem;
         height: 11rem;
         margin-bottom: 2rem;
     }
@@ -107,7 +107,7 @@
         top:35.8%
     }
 }
-@media (max-width:29rem){
+@media (max-width:25rem){
     .todo_form{
         width:16rem;
     }

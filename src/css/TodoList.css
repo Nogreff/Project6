@@ -249,7 +249,7 @@ div{
     .todo_info,.todo_update,.todo_now{
         display: flex;
         flex-wrap: row;
-        width: 27rem;
+        width: 24rem;
         justify-content: space-between center;
         height: 3rem;
         border-radius: 1rem;
@@ -300,16 +300,9 @@ div{
         left:-20%
     }
 }
-@media (max-width:29rem){
+@media (max-width:25rem){
     .todo_info,.todo_update,.todo_now{
-        display: flex;
-        flex-direction: row;
         width: 16rem;
-        justify-content: space-between;
-        height: 3rem;
-        border-radius: 1rem;
-        margin-bottom: 0.5rem;
-        padding: 0.5rem;
     }
 
 }
