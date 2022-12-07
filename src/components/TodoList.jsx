@@ -129,11 +129,13 @@ function TodoList(props) {
           setTimeUp(true)
 
           if(x[i].done===false && x[i].repeat===false){
+            controlRef.current.load()
             controlRef.current.play()
             controlRef.current.loop=true
 /*             setTodoTimer(todoTimer=>{todoTimer.play();todoTimer.loop=true})*/
             setTimeout(()=>controlRef.current.loop=false,5000)
           }else if(x[i].done===false && x[i].repeat===true){
+            controlRef.current.load()
             controlRef.current.play()
             controlRef.current.loop=true
           }
@@ -226,7 +228,7 @@ function TodoList(props) {
            timeUp===true && value.counter==="time up"?
             <div className='todo_now' key={value.id}>
               <a>{value.text}</a>
-              <a className="todo_now_btn" onClick={()=>{controlRef.current.loop=false;deleteTodo(value.id)}}>Done</a>
+              <a className="todo_now_btn" onClick={()=>{controlRef.current.pause();controlRef.current.loop=false;deleteTodo(value.id)}}>Done</a>
             </div>
             :(todoId.some(index=>index===value.id))?
             <div className='todo_update' key={value.id}>
@@ -239,6 +241,7 @@ function TodoList(props) {
                   required
                 />
               </div>
+              <div className='update_time_wrapper'>
               <div ref={index=>timeUpdateError.current[value.id]=index} className='time_updated_wrapper'>
               <input
                   ref={index=>updateTimeRef.current[value.id]=index}
@@ -266,6 +269,8 @@ function TodoList(props) {
                   />
                 </span>
               </div>
+              </div>
+
               <button className='updated_btn' onClick={()=>{updateTodo(value.id,updateTextRef.current[value.id].value,updateTimeRef.current[value.id].value,updateTimeRepeat.current[value.id],updateTimeEnable.current[value.id]);updatedCheck(value.id)}}>Update</button>
             </div>
             :

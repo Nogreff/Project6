@@ -1,5 +1,5 @@
 .todo_form{
-    width: 35rem;
+    width: 36rem;
     height: 5.5rem;
     border-radius: 1rem;
     border: 2px solid orange;
@@ -22,17 +22,23 @@
 .form_text.error:invalid{
     box-shadow: -3px -3px 3px red inset,3px 3px 3px red inset;
 }
-
-.form_text_wrapper.error::after{
+.form_text_wrapper::after{
     content: "Invalid value";
     display: block;
     position: relative;
     color: #fff;
     background-color: red;
-    width: 18.6rem;
+    width: 100%;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     top:22%;
+    font-size: 0rem;
+    height: 0rem;
+    -webkit-transition:height 250ms ease-in,font-size 150ms step-end;
+            transition:height 250ms ease-in,font-size 150ms step-end;
+}
+.form_text_wrapper.error::after{
+    height: 1.5rem;
     font-size: 0.8rem;
 }
 .check_repeat_wrapper{
@@ -55,8 +61,12 @@
     margin-left: 0.1rem;
 
 }
+.time_wrapper{
+    display: flex;
+    flex-direction: row;
+}
 .form_time{
-    width: 5rem;
+    width: 6rem;
     height: 3rem;
     font-size: 1.2rem;
     background-color: black;
@@ -68,22 +78,29 @@
 .form_time.error:invalid{
     box-shadow: -3px -3px 3px red inset,3px 3px 3px red inset;
 }
-.form_time_wrapper.error::after{
+.form_time_wrapper::after{
     content: "Invalid value";
     display: block;
     position: relative;
     color: #fff;
     background-color: red;
-    width: 5.25rem;
+    width: 100%;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     top:22%;
+    font-size: 0;
+    height: 0;
+    -webkit-transition:height 250ms ease-in,font-size 150ms step-end;
+            transition:height 250ms ease-in,font-size 150ms step-end;
+}
+.form_time_wrapper.error::after{
+    height: 1.5rem;
     font-size: 0.8rem;
 }
 @media (max-width:40rem){
     .todo_form{
         flex-wrap: wrap;
-        width:24rem;
+        width: 90vw;
         height: 11rem;
         margin-bottom: 2rem;
     }
@@ -105,11 +122,6 @@
         padding:  0 0.1rem;
         width: 4.25rem;
         top:35.8%
-    }
-}
-@media (max-width:25rem){
-    .todo_form{
-        width:16rem;
     }
 }
 .form_time.disabled{
@@ -134,4 +146,14 @@
     background-color: #FFD2B6;
     cursor: pointer;
     
+}
+.form_time_wrapper{
+    display: flex;
+    justify-content: left;
+}
+.form_timer_options{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
 }

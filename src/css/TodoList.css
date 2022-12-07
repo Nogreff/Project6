@@ -52,10 +52,14 @@ div{
     cursor: pointer;
 }
 .todo_info_done{
-    mask-image: url("../img/check.png");
-    mask-size: 1.5rem;
-    mask-repeat: no-repeat;
-    mask-position: center;
+    -webkit-mask-image: url("../img/check.png");
+            mask-image: url("../img/check.png");
+    -webkit-mask-size: 1.5rem;
+            mask-size: 1.5rem;
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+            mask-position: center;
     background-color: #fff;
     width: 2rem;
     height: 2rem;
@@ -68,10 +72,14 @@ div{
     background-color: lightgreen;
 }
 #todo_info_delete{
-    mask-image:url("../img/delete.png");
-    mask-size: 1.5rem;
-    mask-repeat: no-repeat;
-    mask-position: center;
+    -webkit-mask-image:url("../img/delete.png");
+            mask-image:url("../img/delete.png");
+    -webkit-mask-size: 1.5rem;
+            mask-size: 1.5rem;
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+            mask-position: center;
     background-color: #fff;
     width: 2rem;
     height: 2rem;
@@ -81,10 +89,14 @@ div{
     background-color: orangered;
 }
 #todo_info_update{
-    mask-image:url("../img/edit.png");
-    mask-size: 1.5rem;
-    mask-repeat: no-repeat;
-    mask-position: center;
+    -webkit-mask-image:url("../img/edit.png");
+            mask-image:url("../img/edit.png");
+    -webkit-mask-size: 1.5rem;
+            mask-size: 1.5rem;
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+            mask-position: center;
     background-color: #fff;
     width: 2rem;
     height: 2rem;
@@ -125,6 +137,10 @@ div{
     height:1rem;
     left:100%
 }
+.update_time_wrapper{
+    display: flex;
+    flex-direction: row;
+}
 .todo_update{
     display: flex;
     flex-direction: row;
@@ -145,20 +161,27 @@ div{
 .text_updated.error:invalid{
     box-shadow:-3px -3px 3px red inset,3px 3px 3px red inset
 }
-.text_updated_wrapper.error::after{
+.text_updated_wrapper::after{
     content: "Invalid value";
     display: block;
     position: relative;
     color:#fff;
     background-color:red;
-    width:15.6rem;
+    width:100%;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius:0.5rem;
     top:30.8%;
+    font-size:0;
+    height: 0;
+    -webkit-transition:height 250ms ease-in,font-size 150ms step-end;
+            transition:height 250ms ease-in,font-size 150ms step-end;
+}
+.text_updated_wrapper.error::after{
     font-size:0.8rem;
+    height: 1.5rem;
 }
 .time_updated{
-    width: 5rem;
+    width: 5.5rem;
     height: 2.5rem;
     font-size: 1.1rem;
     border-style: none;
@@ -167,17 +190,24 @@ div{
 .time_updated.error:invalid{
     box-shadow:-3px -3px 3px red inset,3px 3px 3px red inset
 }
-.time_updated_wrapper.error::after{
+.time_updated_wrapper::after{
     content: "Invalid value";
     display: block;
     position: relative;
     color:#fff;
     background-color:red;
-    width:5.25rem;
+    width:100%;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius:0.5rem;
     top:30.8%;
+    font-size:0;
+    height: 0;
+    -webkit-transition:height 250ms ease-in,font-size 150ms step-end;
+            transition:height 250ms ease-in,font-size 150ms step-end;
+}
+.time_updated_wrapper.error::after{
     font-size:0.8rem;
+    height: 1.5rem;
 }
 .time_updated.disabled{
     color: transparent;
@@ -245,11 +275,16 @@ div{
     cursor:pointer;
     background-color: lightseagreen;
 }
+.update_timer_options{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 @media (max-width:40rem){
     .todo_info,.todo_update,.todo_now{
         display: flex;
         flex-wrap: row;
-        width: 24rem;
+        width: 85vw;
         justify-content: space-between center;
         height: 3rem;
         border-radius: 1rem;
@@ -299,10 +334,4 @@ div{
     .no_sound::after{
         left:-20%
     }
-}
-@media (max-width:25rem){
-    .todo_info,.todo_update,.todo_now{
-        width: 16rem;
-    }
-
 }

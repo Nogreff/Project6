@@ -17,8 +17,9 @@
 }
 @media (max-width:40rem){
   .App{
-    min-width: 18rem;
+    width: 100vw;
     height: 90vh;
     overflow-y: auto;
+    padding: 0.5rem;
   }
 }

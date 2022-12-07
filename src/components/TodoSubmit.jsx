@@ -103,6 +103,7 @@ function TodoSubmit(props) {
           required
         />
       </div>
+      <div className='time_wrapper'>
       <div ref={timeError} className='form_time_wrapper'>
         <input
           ref={timeRef}
@@ -114,21 +115,21 @@ function TodoSubmit(props) {
       </div>
       <div className='form_timer_options'>
         <span className='check_enable_wrapper'>
-        <input
-          ref={checkTimeEnable}
-          type="checkbox"
-          onChange={timeInputEnable}
-          className="form_check_enable"
-        />
+          <input
+            ref={checkTimeEnable}
+            type="checkbox"
+            onChange={timeInputEnable}
+            className="form_check_enable"
+          />
         </span>
         <span className='check_repeat_wrapper'>
-        <input
-          ref={checkTimeRepeat}
-          type="checkbox"
-        className="form_check_repeat"
-       />
+          <input
+            ref={checkTimeRepeat}
+            type="checkbox"
+            className="form_check_repeat"
+          />
         </span>
-
+      </div>
       </div>
       <button onClick={handleSubmit} className="todo_btn">ADD</button>
     </form>
