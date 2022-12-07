@@ -24,13 +24,22 @@ div{
     text-decoration: line-through;
     
 }
-.todo_info>a,.todo_info>span>a{
+.todo_text,span>a{
     color: #fff;
     text-decoration: none;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    pointer-events: none;
 }
-.todo_info>a:hover,.todo_info>span>a:hover{
+.todo_text:hover,span>a:hover{
     color: #fff;
-    text-decoration: none;   
+    text-decoration: none;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */   
 }
 .todo_info_options>a:hover{
     cursor: pointer;
