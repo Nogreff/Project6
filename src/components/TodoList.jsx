@@ -127,15 +127,14 @@ function TodoList(props) {
           console.log(timeDif)
           console.log(hhh,mmm)
           setTimeUp(true)
-
+          controlRef.current.load()
           if(x[i].done===false && x[i].repeat===false){
             controlRef.current.load()
             controlRef.current.play()
             controlRef.current.loop=true
 /*             setTodoTimer(todoTimer=>{todoTimer.play();todoTimer.loop=true})*/
             setTimeout(()=>controlRef.current.loop=false,5000)
-          }else if(x[i].done===false && x[i].repeat===true){
-            controlRef.current.load()
+          }else if(x[i].done===false && x[i].repeat===true){  
             controlRef.current.play()
             controlRef.current.loop=true
           }
