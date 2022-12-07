@@ -60,6 +60,12 @@ div{
 .todo_info_options>a:hover{
     cursor: pointer;
 }
+.todo_info_done.done{
+    background-color: lightgreen;
+}
+.todo_info_done:hover{ 
+    background-color: lightgreen;
+}
 .todo_info_done{
     -webkit-mask-image: url("../img/check.png");
             mask-image: url("../img/check.png");
@@ -72,13 +78,8 @@ div{
     background-color: #fff;
     width: 2rem;
     height: 2rem;
+    -webkit-tap-highlight-color: transparent;
     transition:background-color 300ms ease;
-}
-.todo_info_done.done{
-    background-color: lightgreen;
-}
-.todo_info_done:hover{
-    background-color: lightgreen;
 }
 #todo_info_delete{
     -webkit-mask-image:url("../img/delete.png");
