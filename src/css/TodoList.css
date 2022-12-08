@@ -63,9 +63,11 @@ div{
 .todo_info_done.done{
     background-color: lightgreen;
 }
+
 .todo_info_done:hover{ 
     background-color: lightgreen;
 }
+
 .todo_info_done{
     -webkit-mask-image: url("../img/check.png");
             mask-image: url("../img/check.png");
@@ -343,5 +345,8 @@ div{
     }
     .no_sound::after{
         left:-20%
+    }
+    .todo_info_done:hover{ 
+        background-color: inherit
     }
 }
