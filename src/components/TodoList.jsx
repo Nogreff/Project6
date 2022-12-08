@@ -3,7 +3,7 @@ import "../css/TodoList.css"
 import {useState,useRef,useEffect,useCallback} from "react"
 import { ReactDOM } from 'react'
 import { render } from 'react-dom'
-import timeUpSound from "../assets/sound/timeup1.wav"
+import timeUpSound from "../assets/sound/timeup1.mp3"
 
 function TodoList(props) {
   var checkInterval
@@ -129,13 +129,13 @@ function TodoList(props) {
           setTimeUp(true)
       
           if(x[i].done===false && x[i].repeat===false){
-            controlRef.current.load()
+
             controlRef.current.play()
             controlRef.current.loop=true
 /*             setTodoTimer(todoTimer=>{todoTimer.play();todoTimer.loop=true})*/
             setTimeout(()=>controlRef.current.loop=false,5000)
           }else if(x[i].done===false && x[i].repeat===true){  
-            controlRef.current.load()
+
             controlRef.current.play()
             controlRef.current.loop=true
           }
