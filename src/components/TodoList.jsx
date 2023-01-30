@@ -145,9 +145,7 @@ function TodoList(props) {
 									);
 									updatedCheck(value.id);
 								}}
-							>
-								Update
-							</button>
+							></button>
 						</div>
 					</div>
 				) : (

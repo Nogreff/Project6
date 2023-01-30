@@ -8,7 +8,7 @@ div {
 .todo_now {
 	display: flex;
 	flex-direction: row;
-	width: 32rem;
+	width: 34rem;
 	justify-content: space-between;
 	height: 4rem;
 	border-radius: 1rem;
@@ -159,11 +159,11 @@ span > a:hover {
 .update_time_options_wrapper {
 	display: flex;
 	flex-direction: row;
+	margin-right: 1rem;
 }
 .todo_update {
 	display: flex;
 	flex-direction: row;
-	width: 32rem;
 	justify-content: space-evenly;
 }
 .text_updated {
@@ -172,6 +172,7 @@ span > a:hover {
 	border-style: none;
 	box-shadow: -2px -2px 2px gray inset, 2px 2px 2px gray inset;
 	font-size: 1rem;
+	text-size-adjust: none;
 	padding-left: 0.5rem;
 }
 .text_updated:focus {
@@ -200,7 +201,7 @@ span > a:hover {
 	height: 1.5rem;
 }
 .time_updated {
-	width: 5.5rem;
+	width: 6rem;
 	height: 2.5rem;
 	font-size: 1rem;
 	border-style: none;
@@ -236,7 +237,7 @@ span > a:hover {
 .time_updated:focus {
 	outline: none;
 }
-.updated_btn {
+/* .updated_btn {
 	background-color: cornflowerblue;
 	width: 5rem;
 	height: 3rem;
@@ -245,11 +246,29 @@ span > a:hover {
 	font-size: 1rem;
 	color: #fff;
 	letter-spacing: 0.1rem;
+	margin-left: 1rem;
 	transition: background-color 300ms ease;
 }
 .updated_btn:hover {
 	background-color: lightblue;
 	cursor: pointer;
+} */
+.updated_btn {
+	-webkit-mask-image: url('../img/update.jpg');
+	mask-image: url('../img/update.jpg');
+	-webkit-mask-size: 2rem;
+	mask-size: 2rem;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-position: center;
+	background-color: #fff;
+	width: 2.5rem;
+	height: 2.5rem;
+	transition: background-color 300ms ease;
+}
+.updated_btn:hover {
+	background-color: cornflowerblue;
 }
 .update_enable_wrapper::after {
 	content: 'disable';
@@ -334,7 +353,6 @@ span > a:hover {
 		height: 2.5rem;
 		width: 6rem;
 		font-size: 0.9rem;
-		text-size-adjust: none;
 	}
 	.todo_info > span {
 		margin-right: 0.5rem;
@@ -369,5 +387,8 @@ span > a:hover {
 	}
 	.no_sound::after {
 		left: -20%;
+	}
+	.updated_btn {
+		margin: 0;
 	}
 }
