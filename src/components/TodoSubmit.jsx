@@ -135,7 +135,6 @@ function TodoSubmit(props) {
 							className='form_time'
 							min='00:00'
 							max='23:59'
-							step='2'
 							required
 						/>
 					</div>
