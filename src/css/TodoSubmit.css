@@ -72,9 +72,7 @@
 	box-shadow: -3px -3px 3px gray inset, 3px 3px 3px gray inset;
 	color: #fff;
 	border-style: none;
-}
-.form_time::-webkit-datetime-edit-ampm-field {
-	display: none;
+	text-align: center;
 }
 .time_options_wrapper {
 	display: flex;
