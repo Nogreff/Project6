@@ -76,6 +76,7 @@
 }
 input[type='time']::-webkit-datetime-edit-ampm-field {
 	display: none !important;
+	color: transparent !important;
 }
 .time_options_wrapper {
 	display: flex;
