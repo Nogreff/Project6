@@ -133,6 +133,8 @@ function TodoSubmit(props) {
 							type='time'
 							onChange={handleTime}
 							className='form_time'
+							min='00:00'
+							max='23:59'
 							required
 						/>
 					</div>
