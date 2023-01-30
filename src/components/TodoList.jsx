@@ -107,7 +107,7 @@ function TodoList(props) {
 										type='time'
 										onChange={e => newTime(e, value.id)}
 										className='time_updated'
-										pattern='[0-9]{2}:[0-9]{2}'
+										step='1'
 										required
 									/>
 								</div>
