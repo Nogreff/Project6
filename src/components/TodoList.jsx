@@ -108,7 +108,7 @@ function TodoList(props) {
 										onChange={e => newTime(e, value.id)}
 										min='00:00'
 										max='23:59'
-										step='0'
+										step='2'
 										required
 									/>
 								</div>
