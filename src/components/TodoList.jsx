@@ -106,7 +106,8 @@ function TodoList(props) {
 										defaultValue={value.time !== 'no timer' && value.time}
 										type='time'
 										onChange={e => newTime(e, value.id)}
-										className='time_updated'
+										min='00:00'
+										max='23:59'
 										step='0'
 										required
 									/>
