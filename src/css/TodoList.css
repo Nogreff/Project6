@@ -159,7 +159,6 @@ span > a:hover {
 .update_time_options_wrapper {
 	display: flex;
 	flex-direction: row;
-	margin-right: 1rem;
 }
 .todo_update {
 	display: flex;
@@ -197,7 +196,7 @@ span > a:hover {
 	transition: height 250ms ease-in, font-size 150ms step-end;
 }
 .text_updated_wrapper.error::after {
-	font-size: 0.8rem;
+	font-size: 0.72rem;
 	height: 1.5rem;
 }
 .time_updated {
@@ -226,7 +225,7 @@ span > a:hover {
 	transition: height 250ms ease-in, font-size 150ms step-end;
 }
 .time_updated_wrapper.error::after {
-	font-size: 0.8rem;
+	font-size: 0.72rem;
 	height: 1.5rem;
 }
 .time_updated.disabled {
@@ -239,7 +238,7 @@ span > a:hover {
 .updated_btn {
 	background-color: cornflowerblue;
 	width: 5rem;
-	height: 2.5rem;
+	height: 3rem;
 	border-radius: 1rem;
 	border-style: none;
 	font-size: 1rem;
@@ -342,12 +341,13 @@ span > a:hover {
 		width: 75vw;
 		justify-content: space-between;
 	}
+	.update_timer_options {
+		margin-left: 0.5rem;
+	}
 	.text_updated_wrapper.error::after {
-		width: 14.6rem;
 		top: 63%;
 	}
 	.time_updated_wrapper.error::after {
-		width: 4.45rem;
 		top: 73.8%;
 	}
 	.todo_info_done {

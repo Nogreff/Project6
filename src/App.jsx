@@ -6,7 +6,6 @@ import TodoSubmit from './components/TodoSubmit';
 function App() {
 	const [todoData, setTodoData] = useState([]);
 	const [timeManager, setTimeManager] = useState([]);
-
 	const newTodo = (todo, timeDisabled) => {
 		if (
 			!todo.text ||
@@ -21,7 +20,6 @@ function App() {
 	const deleteTodo = todo => {
 		setTodoData(todoData.filter(index => index.id !== todo));
 		setTimeManager(timeManager.filter(time => time.timerID !== todo));
-		console.log(timeManager);
 	};
 	const updateTodo = (todoId, newTxt, newTime, newRepeat, updateCheck) => {
 		if (

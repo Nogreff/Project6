@@ -39,7 +39,7 @@
 }
 .form_text_wrapper.error::after {
 	height: 1.5rem;
-	font-size: 0.8rem;
+	font-size: 0.72rem;
 }
 .check_repeat_wrapper {
 	display: flex;
@@ -73,6 +73,9 @@
 	color: #fff;
 	border-style: none;
 }
+.form_time::-webkit-datetime-edit-ampm-field {
+	display: none;
+}
 .time_options_wrapper {
 	display: flex;
 	flex-direction: row;
@@ -98,7 +101,7 @@
 }
 .form_time_wrapper.error::after {
 	height: 1.5rem;
-	font-size: 0.8rem;
+	font-size: 0.72rem;
 }
 @media (max-width: 40rem) {
 	.todo_form {
@@ -125,12 +128,9 @@
 		margin-left: 0.5rem;
 	}
 	.form_text_wrapper.error::after {
-		width: 14.6rem;
 		top: 24.4%;
 	}
 	.form_time_wrapper.error::after {
-		padding: 0 0.1rem;
-		width: 4.25rem;
 		top: 35.8%;
 	}
 }

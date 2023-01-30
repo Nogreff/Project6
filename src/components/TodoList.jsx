@@ -11,11 +11,7 @@ function TodoList(props) {
 		textUpdateError,
 		updateTimeRef,
 		timeUpdateError,
-		// newText,
-		// newTime,
 		updateTimeEnable,
-		// updateTimeRepeat,
-		// timeEnabler,
 		todoId,
 		updatedCheck,
 		todoDone,
@@ -25,7 +21,6 @@ function TodoList(props) {
 		updateCheck,
 	} = props;
 
-	// const doneRef = useRef();
 	const updateTimeRepeat = useRef([]);
 	const counterCheck = useRef(false);
 	const resetInterval = useRef();
@@ -176,7 +171,6 @@ function TodoList(props) {
 						</span>
 						<div className='todo_info_options'>
 							<a
-								// ref={doneRef}
 								className={
 									value.done === true ? 'todo_info_done done' : 'todo_info_done'
 								}
@@ -202,13 +196,9 @@ TodoList.propTypes = {
 	setTodoData: PropTypes.func,
 	updateTextRef: PropTypes.object,
 	textUpdateError: PropTypes.object,
-	// newText: PropTypes.func,
 	updateTimeRef: PropTypes.object,
 	timeUpdateError: PropTypes.object,
-	// newTime: PropTypes.func,
 	updateTimeEnable: PropTypes.object,
-	// updateTimeRepeat: PropTypes.object,
-	// timeEnabler: PropTypes.func,
 	todoId: PropTypes.array,
 	setTodoId: PropTypes.func,
 	updatedCheck: PropTypes.func,

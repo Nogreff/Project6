@@ -113,7 +113,6 @@ function TodoSubmit(props) {
 		checkTimeFormat();
 		checkInputData();
 		cleanInputs();
-		// setNewInput(inputRef.current.value);
 	};
 	return (
 		<form onSubmit={handleSubmit} className='todo_form'>

@@ -13,15 +13,14 @@ function TodoListFunctions(props) {
 		setTimeManager,
 	} = props;
 	const [todoId, setTodoId] = useState([]);
+	const [timeUp, setTimeUp] = useState(false);
+	const controlRef = useRef(new Audio(timeUpSound));
 	const updateTextRef = useRef([]);
 	const textUpdateError = useRef([]);
 	const updateTimeRef = useRef([]);
 	const timeUpdateError = useRef([]);
 	const updateTimeEnable = useRef([]);
-
 	const reftest = useRef(false);
-	const [timeUp, setTimeUp] = useState(false);
-	const controlRef = useRef(new Audio(timeUpSound));
 	const timeManagerFormat = {
 		timerID: null,
 		actualHour: 0,
@@ -76,19 +75,6 @@ function TodoListFunctions(props) {
 		timeManagerSetup[index].todoHour = parseInt(newTimer[0]);
 		timeManagerSetup[index].todoMinute = parseInt(newTimer[1]);
 		timeDifferenceCalculation(timeManagerSetup, index);
-		/* 			timeManagerSetup[index].todoHour * 60 +
-				timeManagerSetup[index].todoMinute >=
-			timeManagerSetup[index].actualHour * 60 +
-				timeManagerSetup[index].actualMinute
-				? timeManagerSetup[index].todoHour * 60 +
-				  timeManagerSetup[index].todoMinute -
-				  (timeManagerSetup[index].actualHour * 60 +
-						timeManagerSetup[index].actualMinute)
-				: timeManagerSetup[index].todoHour * 60 +
-				  timeManagerSetup[index].todoMinute +
-				  1440 -
-				  (timeManagerSetup[index].actualHour * 60 +
-						timeManagerSetup[index].actualMinute); */
 	};
 	const timeDifferenceCheck = (id, done, repeat) => {
 		const timeManagerSetup = timeManager;
@@ -157,7 +143,6 @@ function TodoListFunctions(props) {
 		});
 		if (x !== todoData) {
 			setTodoData(xx => [...xx]);
-			// x = [];
 		}
 	};
 
@@ -225,14 +210,10 @@ function TodoListFunctions(props) {
 				updateTimeRef={updateTimeRef}
 				timeUpdateError={timeUpdateError}
 				updateTimeEnable={updateTimeEnable}
-				// updateTimeRepeat={updateTimeRepeat}
 				controlRef={controlRef}
 				todoId={todoId}
 				timeUp={timeUp}
 				setTodoId={setTodoId}
-				/* 				newText={newText}
-				newTime={newTime}
-				timeEnabler={timeEnabler} */
 				updatedCheck={updatedCheck}
 				todoDone={todoDone}
 				countFormat={countFormat}
