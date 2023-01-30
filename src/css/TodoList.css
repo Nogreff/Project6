@@ -202,7 +202,7 @@ span > a:hover {
 .time_updated {
 	width: 5.5rem;
 	height: 2.5rem;
-	font-size: 1.1rem;
+	font-size: 1rem;
 	border-style: none;
 	text-align: center;
 	box-shadow: -2px -2px 2px gray inset, 2px 2px 2px gray inset;

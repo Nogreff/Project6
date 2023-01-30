@@ -67,24 +67,12 @@
 .form_time {
 	width: 6rem;
 	height: 3rem;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	background-color: black;
 	box-shadow: -3px -3px 3px gray inset, 3px 3px 3px gray inset;
 	color: #fff;
 	border-style: none;
 	text-align: center;
-}
-input[type='time']::-webkit-datetime-edit-ampm-field {
-	display: none !important;
-	color: transparent !important;
-}
-input[type='time']::-webkit-clear-button {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	-o-appearance: none;
-	-ms-appearance: none;
-	appearance: none;
-	margin: -10px;
 }
 .time_options_wrapper {
 	display: flex;
