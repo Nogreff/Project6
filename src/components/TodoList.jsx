@@ -66,7 +66,6 @@ function TodoList(props) {
 	return (
 		<div>
 			{todoData.map((value, index) => {
-				console.log(value.id);
 				return timeUp === true && value.counter === 'time up' ? (
 					<div className='todo_now' key={value.id}>
 						<a>{value.text}</a>

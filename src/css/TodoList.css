@@ -29,20 +29,20 @@ div {
 span > a {
 	color: #fff;
 	text-decoration: none;
-	-webkit-user-select: none; /* Safari */
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* IE10+/Edge */
-	user-select: none; /* Standard */
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 	pointer-events: none;
 }
 .todo_text:hover,
 span > a:hover {
 	color: #fff;
 	text-decoration: none;
-	-webkit-user-select: none; /* Safari */
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* IE10+/Edge */
-	user-select: none; /* Standard */
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 .todo_info_options > a:hover {
 	cursor: pointer;
@@ -237,22 +237,6 @@ span > a:hover {
 .time_updated:focus {
 	outline: none;
 }
-/* .updated_btn {
-	background-color: cornflowerblue;
-	width: 5rem;
-	height: 3rem;
-	border-radius: 1rem;
-	border-style: none;
-	font-size: 1rem;
-	color: #fff;
-	letter-spacing: 0.1rem;
-	margin-left: 1rem;
-	transition: background-color 300ms ease;
-}
-.updated_btn:hover {
-	background-color: lightblue;
-	cursor: pointer;
-} */
 .updated_btn {
 	-webkit-mask-image: url('../img/update.jpg');
 	mask-image: url('../img/update.jpg');
@@ -285,7 +269,6 @@ span > a:hover {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	width: 32rem;
 	animation: todo_glow 1500ms ease infinite;
 }
 
