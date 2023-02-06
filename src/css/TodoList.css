@@ -123,34 +123,49 @@ span > a:hover {
 .todo_info_options > a {
 	margin-right: 0.5rem;
 }
-.todo_info > span {
+.todo_info_timer {
+	padding: 0;
+	list-style: none;
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	color: white;
 }
-.repeat_sound::before {
-	content: '';
-	display: inline-block;
-	position: relative;
-	background-image: url('../img/repeat.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 1rem;
+.todo_info_timer > li {
+	margin: 0 0.5rem;
+}
+.repeat_sound {
+	-webkit-mask-image: url('../img/repeat.png');
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	-webkit-mask-size: 1rem;
+	mask-image: url('../img/repeat.png');
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: 1rem;
+	background-color: white;
 	width: 1rem;
 	height: 1rem;
-	left: -20%;
+	visibility: hidden;
 }
-.no_sound::after {
-	content: '';
-	display: inline-block;
-	position: relative;
-	background-image: url('../img/no-sound.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 1rem;
+.repeat_sound.active {
+	visibility: visible;
+}
+.no_sound {
+	-webkit-mask-image: url('../img/no-sound.png');
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	-webkit-mask-size: 1rem;
+	mask-image: url('../img/no-sound.png');
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: 1rem;
+	background-color: white;
 	width: 1rem;
 	height: 1rem;
-	left: 100%;
+	visibility: hidden;
+}
+.no_sound.active {
+	visibility: visible;
 }
 .update_time_wrapper {
 	display: flex;

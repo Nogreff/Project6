@@ -155,17 +155,21 @@ function TodoList(props) {
 						<a className={value.done === true ? 'todo_text done' : 'todo_text'}>
 							{value.text}
 						</a>
-						<span
-							className={
-								value.repeat === true
-									? 'repeat_sound'
-									: value.time === 'no timer'
-									? 'no_sound'
-									: null
-							}
-						>
-							<a>{value.time === 'no timer' ? '' : value.time}</a>
-						</span>
+						<ul className='todo_info_timer'>
+							<li
+								className={
+									value.repeat === true ? 'repeat_sound active' : 'repeat_sound'
+								}
+							></li>
+							<li className='only_timer'>
+								{value.time === 'no timer' ? '' : value.time}
+							</li>
+							<li
+								className={
+									value.time === 'no timer' ? 'no_sound active' : 'no sound'
+								}
+							></li>
+						</ul>
 						<div className='todo_info_options'>
 							<a
 								className={
