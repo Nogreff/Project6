@@ -13,7 +13,7 @@
 	justify-content: center;
 	align-items: center;
 	opacity: 0;
-	visibility: visible;
+	visibility: hidden;
 }
 .todo_message.show {
 	width: 18rem;
@@ -45,4 +45,11 @@
 	word-wrap: break-word;
 	text-align: left center;
 	font-size: 0.8rem;
+}
+
+@media (max-width: 40rem) {
+	.todo_message {
+		bottom: 0;
+		top: 2%;
+	}
 }
