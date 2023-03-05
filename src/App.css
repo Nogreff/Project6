@@ -1,25 +1,25 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
 }
-.App{
-  display: flex;
-  width: 40rem;
-  height: 50rem;
-  background: #0F303B;
-  border-radius: 5%;
+.App {
+	display: flex;
+	width: 40rem;
+	height: 50rem;
+	background: #0f303b;
+	border-radius: 5%;
 }
-.App>h1{
-  color: white;
-  margin-bottom: 2rem;
+.App > h1 {
+	color: white;
+	margin-bottom: 2rem;
 }
-@media (max-width:40rem){
-  .App{
-    width: 100vw;
-    height: 90vh;
-    overflow-y: auto;
-    padding: 0.5rem;
-  }
+@media (max-width: 40rem) {
+	.App {
+		width: 100vw;
+		height: 90vh;
+		overflow-y: auto;
+		padding: 0.5rem;
+	}
 }

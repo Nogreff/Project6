@@ -71,6 +71,7 @@ function TodoSubmit(props) {
 	};
 	const setNewTodo = () => {
 		setNewId(newId => newId + 1);
+		console.log(newId);
 		newTodo(
 			{
 				id: newId,

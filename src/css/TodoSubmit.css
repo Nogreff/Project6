@@ -1,6 +1,6 @@
 .todo_form {
 	width: 36rem;
-	height: 5.5rem;
+	min-height: 5.5rem;
 	border-radius: 1rem;
 	border: 2px solid orange;
 	box-shadow: -2px -2px 2px gold, 2px 2px 2px gold;
@@ -140,7 +140,7 @@
 	.todo_form {
 		flex-wrap: wrap;
 		width: 90vw;
-		height: 11rem;
+		min-height: 11rem;
 		margin-bottom: 2rem;
 	}
 	.form_text {

@@ -64,7 +64,7 @@ function TodoList(props) {
 		}
 	}, [todoData]);
 	return (
-		<div>
+		<div className='todo_list'>
 			{todoData.map((value, index) => {
 				return timeUp === true && value.counter === 'time up' ? (
 					<div className='todo_now' key={value.id}>

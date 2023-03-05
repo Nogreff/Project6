@@ -3,6 +3,12 @@ div {
 	flex-direction: column;
 	align-items: center;
 }
+.todo_list {
+	overflow-x: hidden;
+	overflow-y: auto;
+	scrollbar-width: thin;
+	width: 92%;
+}
 .todo_info,
 .todo_update,
 .todo_now {
@@ -10,7 +16,7 @@ div {
 	flex-direction: row;
 	width: 34rem;
 	justify-content: space-between;
-	height: 4rem;
+	min-height: 4rem;
 	border-radius: 1rem;
 	margin-bottom: 0.5rem;
 	padding: 0.5rem;
@@ -20,13 +26,16 @@ div {
 }
 .todo_text {
 	width: 18rem;
+	max-height: 3rem;
 	text-align: left;
+	word-wrap: break-word;
+	overflow: hidden;
 }
 .todo_text.done {
 	text-decoration: line-through;
 }
 .todo_text,
-span > a {
+div > p {
 	color: #fff;
 	text-decoration: none;
 	-webkit-user-select: none;
@@ -36,7 +45,7 @@ span > a {
 	pointer-events: none;
 }
 .todo_text:hover,
-span > a:hover {
+div > p:hover {
 	color: #fff;
 	text-decoration: none;
 	-webkit-user-select: none;
@@ -132,6 +141,10 @@ span > a:hover {
 }
 .todo_info_timer > li {
 	margin: 0 0.5rem;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 .repeat_sound {
 	-webkit-mask-image: url('../img/repeat.png');
@@ -327,6 +340,9 @@ span > a:hover {
 	align-items: flex-start;
 }
 @media (max-width: 40rem) {
+	.todo_list {
+		width: 95%;
+	}
 	.todo_info,
 	.todo_update,
 	.todo_now {
